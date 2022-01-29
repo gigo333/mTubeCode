@@ -1,0 +1,5 @@
+vscode-ext
+git+https://github.com/mps-youtube/pafy.git
+youtube-dl
+python-vlc
+pynput

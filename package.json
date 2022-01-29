@@ -1,0 +1,32 @@
+{
+  "name": "mTubeMusic",
+  "displayName": "mTubeMusic",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.58.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./build/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "mTubeMusic.playSong",
+        "title": "Play Song"
+      },
+      {
+        "command": "mTubeMusic.stopSong",
+        "title": "Stop Song"
+      }
+    ],
+    "configuration": {
+      "title": "mTubeMusic",
+      "properties": {}
+    }
+  },
+  "activationEvents": [
+    "onCommand:mTubeMusic.playSong",
+    "onCommand:mTubeMusic.stopSong"
+  ]
+}
