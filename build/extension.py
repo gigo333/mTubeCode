@@ -36,7 +36,7 @@ def play_song():
     if query!=None:
         query=query.split(" ")
         query=[q for q in query if q!=""]
-        filename=os.path.dirname(os.path.realpath(__file__))+"\\tubeMusic.py"
+        filename=os.path.join(os.path.dirname(os.path.realpath(__file__)),"tubeMusic.py")
         subprocess.Popen(["python",filename]+query)
     
 
