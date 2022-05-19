@@ -182,7 +182,7 @@ function activate(context) {
 let globalStorage = {}
 console.log("The ExtensionmTubeMusic has started");
 let playSong = vscode.commands.registerCommand('mTubeMusic.playSong',async function () {
-let funcName = "play_song"; let pyVar = "python";
+let funcName = "play_song"; let pyVar = "python3";
         let py = spawn(pyVar, [pythonPath, funcName]);
 
         py.stdout.on("data", (data) => {
@@ -198,7 +198,7 @@ let funcName = "play_song"; let pyVar = "python";
         });
 context.subscriptions.push(playSong);
 let stopSong = vscode.commands.registerCommand('mTubeMusic.stopSong',async function () {
-let funcName = "stop_song"; let pyVar = "python";
+let funcName = "stop_song"; let pyVar = "python3";
         let py = spawn(pyVar, [pythonPath, funcName]);
 
         py.stdout.on("data", (data) => {

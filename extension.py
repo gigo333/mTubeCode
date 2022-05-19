@@ -2,6 +2,7 @@ import vscode
 import os
 import subprocess
 import socket
+import platform
 
 ext = vscode.Extension(name = "mTubeMusic", display_name = "mTubeMusic", version = "0.0.1")
 playing=False
@@ -34,7 +35,10 @@ def play_song():
         query=query.split(" ")
         query=[q for q in query if q!=""]
         filename=os.path.join(os.path.dirname(os.path.realpath(__file__)),"tubeMusic.py")
-        subprocess.Popen(["python",filename]+query)
+        python_shell="python3"
+        if(platform.system()=="Windows"):
+            python_shell="python.exe"
+        subprocess.Popen([python_shell,filename]+query)
     
 
 @ext.command()
